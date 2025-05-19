@@ -1,0 +1,6 @@
+function encontrarNumeroFaltante(arr: number[]): number {
+  const n = arr.length + 1; // Porque falta un número
+  const sumaEsperada = (n * (n + 1)) / 2;
+  const sumaActual = arr.reduce((acc, num) => acc + num, 0);
+  return sumaEsperada - sumaActual;
+}
